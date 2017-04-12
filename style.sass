@@ -1,0 +1,442 @@
+//     Colors    //
+$teal: #02AB94
+$peach: #FD7774
+$bg-color: #1d1f21
+$yeller: 	#ECE942
+$mustard: #FEB511
+//  70's Pallete //
+$emerald: #21B6A8
+$cerulean-blue: #7DA3AC
+$chili-chocolate: #7F1769
+$sweet-pink: #FFCBF4
+$mexican-sand: #B69521
+$harvest-white: #FFF4CB
+///////////////////
+//      Nav      //
+$navbar-height: 40px
+// These two are for bottom paddings //
+$big-logo-padding: 10px
+$small-logo-padding: 2px
+
+//////////////////////
+/////// MIXINS ///////
+//////////////////////
+
+//// Media Screens ////
+@mixin big-stuff
+  @media screen and (min-width: 2560px)
+    @content
+
+@mixin large-laptop
+  @media screen and (min-width: 1440px)
+    @content
+
+@mixin laptop
+  @media screen and (min-width: 1024px)
+    @content
+
+@mixin tablet
+  @media screen and (min-width: 768px)
+    @content
+
+@mixin phone
+  @media screen and (max-width: 767px)
+    @content
+
+@mixin medium-phone
+  @media screen and (min-width: 375px)
+    @content
+
+@mixin small-phone
+  @media screen and (min-width: 330px)
+    @content
+
+////  Main Styles  ////
+body
+  background: $bg-color
+h1
+  color: $yeller
+  font:
+    size: 50px
+    family: 'Monoton', sans-serif
+  text-shadow: 2px 2px 8px red, 0 0 5px white
+  a
+    color: $yeller
+    font:
+      size: 50px
+      family: 'Monoton', sans-serif
+    text-shadow: 2px 2px 8px red, 0 0 5px white
+    &:hover
+      color: white
+  @include big-stuff
+    font-size: 100px
+  @include large-laptop
+    font-size: 75px
+
+h5
+  color: white
+  font:
+    family: 'Anton', sans-serif
+  margin-top: -10px
+  transform: skewX(-6deg) rotate(-12deg) skewY(6deg) skewX(-12deg)
+
+a
+  color: white
+  font:
+    family: 'Archivo Black', sans-serif
+    size: 20px
+  &:hover
+    text-decoration: none
+  @include big-stuff
+    font-size: 40px
+  @include large-laptop
+    font-size: 30px
+  @include phone
+    font-size: 30px
+
+.landing
+  height: 100vh
+  text-align: center
+  position: relative
+
+.socials
+  position: absolute
+  @include tablet
+    top: 1%
+    left: 5%
+  @include phone
+    width: 100%
+
+.contact
+  position: absolute
+  @include tablet
+    writing-mode: vertical-lr
+    top: 5%
+    left: 1%
+  @include phone
+    bottom: -7%
+    display: inline-block
+    transform: translate(-50%, -50%)
+    font-size: 50px
+
+.about-holder
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 80%
+  transform: translate(-50%, -50%)
+  .about
+    transform: skewX(-6deg) rotate(-12deg) skewY(6deg) skewX(-12deg)
+
+.s1:hover
+  color: $mustard
+.s2:hover
+  color: $cerulean-blue
+.s3:hover
+  color: $chili-chocolate
+.s4:hover
+  color: $sweet-pink
+.s5:hover
+  color: $mexican-sand
+.s6:hover
+  color: $peach
+
+
+///////////////////////////////////////
+//               NAV                 //
+///////////////////////////////////////
+
+/* *********************************
+   Some Style Overrides on Bootstrap
+  ********************************** */
+.navbar-inverse
+  background: rgba(62,195,246,0)
+  border-bottom: none
+
+.navbar-inverse .navbar-toggle
+  border: 1px solid #333
+  border-color: rgba(255,255,255,0.7)
+
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form
+  border-color: transparent
+  @media (max-width: 767px)
+    background: rgba(255,255,255,0.75)
+
+.navbar-inverse .navbar-nav > li > a
+  color: white
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus
+  color: $peach
+
+/* *********************************
+           Toolbar Logo
+  ********************************** */
+.small-logo-container
+    padding-top: $navbar-height
+    height: $navbar-height
+    overflow: hidden
+    position: absolute
+
+.small-logo
+  color: white
+  font-size: 2.5em
+  padding-bottom: $small-logo-padding
+
+/* *********************************
+           Big Logo
+  ********************************** */
+.big-logo-row
+  background: $bg-color
+
+  .big-logo-container
+    padding-top: $navbar-height
+    h1
+      font-size: 1em
+      margin: 0
+      padding: 0 0 $big-logo-padding 0
+    @media (min-width: 400px)
+      font-size: 4.5em
+    @media (min-width: 440px)
+      font-size: 5.5em
+    @media (min-width: 500px)
+      font-size: 6.5em
+    @media (min-width: 630px)
+      font-size: 7.5em
+    @media (min-width: 768px)
+      font-size: 9em
+      padding-bottom: $big-logo-padding * 2
+    @media (min-width: 1200px)
+      font-size: 12em
+
+
+/* Common style */
+.content
+	margin: 0 auto
+	max-width: 1000px
+
+.content > h2
+	clear: both
+	margin: 0
+	padding: 4em 1% 0
+	color: #484B54
+	font-weight: 800
+	font-size: 1.5em
+
+.content > h2:first-child
+	padding-top: 0em
+
+.grid figure
+	position: relative
+	float: left
+	overflow: hidden
+	margin: 10px 1%
+	min-width: 320px
+	max-width: 480px
+	max-height: 360px
+	width: 48%
+	height: auto
+	background: #3085a3
+	text-align: center
+	cursor: pointer
+
+.grid figure img
+	position: relative
+	display: block
+	min-height: 100%
+	max-width: 100%
+	opacity: 0.8
+
+.grid figure figcaption
+	padding: 2em
+	color: #fff
+	text-transform: uppercase
+	font-size: 1.25em
+	-webkit-backface-visibility: hidden
+	backface-visibility: hidden
+
+.grid figure figcaption::before,
+.grid figure figcaption::after
+	pointer-events: none
+
+.grid figure figcaption,
+.grid figure figcaption > a
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a
+	z-index: 1000
+	text-indent: 200%
+	white-space: nowrap
+	font-size: 0
+	opacity: 0
+
+.grid figure h2
+	word-spacing: -0.15em
+	font-weight: 300
+
+.grid figure h2 span
+	font-weight: 800
+
+.grid figure h2,
+.grid figure p
+	margin: 0
+
+.grid figure p
+	letter-spacing: 1px
+	font-size: 68.5%
+
+/* Individual effects */
+/*---------------------*/
+/***** Post Effect *****/
+/*---------------------*/
+
+figure.post-effect figcaption
+	top: auto
+	bottom: 0
+	padding: 1em
+	height: 3.75em
+	background: #fff
+	color: #3c4a50
+	-webkit-transition: -webkit-transform 0.35s
+	transition: transform 0.35s
+	-webkit-transform: translate3d(0,100%,0)
+	transform: translate3d(0,100%,0)
+
+figure.post-effect h2
+	float: left
+
+figure.post-effect p.icon-links a
+	float: right
+	color: #3c4a50
+	font-size: 2em
+
+figure.post-effect:hover p.icon-links a:hover,
+figure.post-effect:hover p.icon-links a:focus
+	color: #252d31
+
+figure.post-effect p.description
+	position: absolute
+	bottom: 8em
+	padding: 2em
+	color: #fff
+	text-transform: none
+	font-size: 90%
+	opacity: 0
+	-webkit-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
+	-webkit-transition: opacity 0.35s
+	transition: opacity 0.35s
+	-webkit-backface-visibility: hidden; /* Fix for Chrome 37.0.2062.120 (Mac) */
+
+figure.post-effect h2,
+figure.post-effect p.icon-links a
+	-webkit-transition: -webkit-transform 0.35s
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,200%,0)
+	transform: translate3d(0,200%,0)
+
+figure.post-effect p.icon-links a span::before
+	display: inline-block
+	padding: 8px 10px
+	//font-family: 'feathericons'
+	speak: none
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+figure.post-effect h2
+	display: inline-block
+
+figure.post-effect:hover p.description
+	opacity: 1
+
+figure.post-effect:hover figcaption,
+figure.post-effect:hover h2,
+figure.post-effect:hover p.icon-links a
+	-webkit-transform: translate3d(0,0,0)
+	transform: translate3d(0,0,0)
+
+figure.post-effect:hover h2
+	-webkit-transition-delay: 0.05s
+	transition-delay: 0.05s
+
+figure.post-effect:hover p.icon-links a:nth-child(3)
+	-webkit-transition-delay: 0.1s
+	transition-delay: 0.1s
+
+figure.post-effect:hover p.icon-links a:nth-child(2)
+	-webkit-transition-delay: 0.15s
+	transition-delay: 0.15s
+
+figure.post-effect:hover p.icon-links a:first-child
+	-webkit-transition-delay: 0.2s
+	transition-delay: 0.2s
+
+@media screen and (max-width: 50em)
+	.content
+		padding: 0 10px
+		text-align: center
+
+	.grid figure
+		display: inline-block
+		float: none
+		margin: 10px auto
+		width: 100%
+
+/// Blink Effect ///
+.blink
+  animation: blink 2s steps(2, start) infinite
+  -webkit-animation: blink 10s steps(2, start) infinite
+  @keyframes blink
+    to
+      visibility: hidden
+  @-webkit-keyframes blink
+    to
+      visibility: hidden
+
+// Hamburger X //
+.navbar-toggle
+  border: none
+  background: transparent !important
+  &:hover
+    background: transparent !important
+  .icon-bar
+    width: 22px
+    transition: all 0.2s
+  .top-bar
+    transform: rotate(45deg)
+    transform-origin: 10% 10%
+  .middle-bar
+    opacity: 0
+  .bottom-bar
+    transform: rotate(-45deg)
+    transform-origin: 10% 90%
+  &.collapsed
+    .top-bar
+      transform: rotate(0)
+    .middle-bar
+      opacity: 1
+    .bottom-bar
+      transform: rotate(0)
+
+
+////   Easter Egg   ////
+@media screen and (min-width: 275px)
+  h3
+    display: none
+
+@media screen and (max-width: 274px)
+  a
+    display: none
+  h1
+    display: none
+  h3
+    color: $peach
+    font:
+      size: 50px
+      family: 'Monoton', sans-serif
+    text-shadow: 2px 2px 8px $teal, 0 0 5px white
