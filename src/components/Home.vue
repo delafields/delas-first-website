@@ -35,7 +35,7 @@ export default {
 </script>
 
 
-<style lang="sass">
+<style lang="sass" scoped>
   $bg-color: #263238
   $yeller: 	#ECE942
   $emerald: #21B6A8
@@ -62,11 +62,11 @@ export default {
 
   .fullscreen-wrapper
     display: grid
+    width: 100vw
+    height: 100vh
     background-color: $bg-color
     grid-template-rows: [header-start] 10vh [header-end contact-row-start] 10vh [contact-row-end] auto [bottom-page]
     grid-template-columns: [contact-col-start] 7vh [contact-col-end] auto [right-page]
-    width: 100vw
-    height: 100vh
 
   .home-link
     color: white
