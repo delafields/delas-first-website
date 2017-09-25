@@ -1,20 +1,18 @@
 <template>
-  <div class="fullscreen-wrapper">
+  <div class="site">
     <div class="socials">
       <a class="home-link" :href="links.blog">BLOG </a>
       <a class="home-link" :href="links.twitter">TWITTER </a>
       <a class="home-link" :href="links.github">GITHUB </a>
     </div>
     <div class="contact">
-      <a class="home-link" :href="links.email" id="contact">CONTACT</a>
+      <a class="home-link" :href="links.email">CONTACT</a>
     </div>
     <div class="title">
-      <div id="title-wrapper">
-        <router-link to="/projects">
-          <h1 id="flicker">I &nbsp;build &nbsp;stuff.</h1>
-          <h5 id="blink">↑CHECK THE STUFF OUT↑</h5>
-        </router-link>
-      </div>
+      <router-link to="/projects">
+        <h1 id="flicker">I &nbsp;build &nbsp;stuff.</h1>
+        <h5 id="blink">↑CHECK THE STUFF OUT↑</h5>
+      </router-link>
     </div>
   </div>
 </template>
@@ -36,6 +34,10 @@ export default {
 
 
 <style lang="sass" scoped>
+
+  // –––––––––––––––––––––––––––
+  //      Colors & Mixins
+  // –––––––––––––––––––––––––––
   $bg-color: #263238
   $yeller: 	#ECE942
   $emerald: #21B6A8
@@ -51,54 +53,34 @@ export default {
   @mixin webkit-neon-glow
     -webkit-text-shadow: 4px 3px 3px rgba(255, 23, 68, 0.60), 1px 1px 3px rgba(255, 255, 255, 0.4)
 
-
-  *
+  //  –––––––––––––––––––––––––––
+  //       CSS Reset
+  //  –––––––––––––––––––––––––––
+  html, *, body
     box-sizing: border-box
-    padding: 0
     margin: 0
+    padding: 0
     text-decoration: none
 
-
-
-  .fullscreen-wrapper
-    display: grid
-    width: 100vw
-    height: 100vh
-    background-color: $bg-color
-    grid-template-rows: [header-start] 10vh [header-end contact-row-start] 10vh [contact-row-end] auto [bottom-page]
-    grid-template-columns: [contact-col-start] 7vh [contact-col-end] auto [right-page]
-
+  // –––––––––––––––––––––––––––
+  //        Typography
+  // –––––––––––––––––––––––––––
   .home-link
     color: white
     font-size: 25px
     font-family: 'Archivo Black', sans-serif
 
   .socials
-    grid-area: [header-start] / [contact-col-end] / [header-end] / [right-page]
-    align-self: center
     @for $i from 1 through length($colors)
       a:nth-child(#{length($colors)}n+#{$i})
         &:hover
           color: nth($colors, $i)
 
   .contact
-    grid-area: [contact-row-start] / [contact-col-start] / [contact-row-end] / [contact-col-end]
-    justify-self: center
-    a
-      writing-mode: vertical-lr
-      //&:hover, &:focus
-        color: $chili-chocolate
-
+    a:hover
+      color: $chili-chocolate
 
   .title
-    grid-area: [header-start] / [contact-col-start] / [bottom-page] / [right-page]
-    justify-self: center
-    align-self: center
-
-  #title-wrapper
-    text-align: center
-    transform: skewX(-6deg) rotate(-12deg) skewY(6deg) skewX(-12deg)
-
     h1
       @include neon-glow
       font-family: 'Monoton', sans-serif
@@ -106,12 +88,80 @@ export default {
       color: #FF1744
       &:hover
         color: $yeller
-
     h5
       font-size: 16px
       color: white
       font-family: 'Anton', sans-serif
       letter-spacing: 1px
+
+  @media screen and (max-width: 499px)
+    .home-link
+      font-size: 23px
+
+  // –––––––––––––––––––––––––––
+  //        General Styles
+  // –––––––––––––––––––––––––––
+  *
+    background-color: $bg-color
+
+  .title
+    text-align: center
+    transform: skewX(-6deg) rotate(-12deg) skewY(6deg) skewX(-12deg)
+
+  //–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  //   If no grid support, limit width to 50em & center align
+  //–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  @media screen and (max-width: 499px)
+    .site
+      display: grid
+      grid-template-columns: auto
+      grid-template-rows: 10vh auto 10vh
+      grid-template-areas: "socials" "title" "contact"
+      height: 100vh
+      width: 100vw
+      align-items: center
+      justify-items: center
+
+    .contact
+      grid-area: contact
+    .socials
+      grid-area: socials
+    .title
+      grid-area: title
+
+  //–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  //   Grid layout for wider screens, when browser supports grid:
+  //–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+  @supports (display: grid)
+    @media screen and (min-width: 500px)
+
+      .site
+        display: grid
+        grid-template-columns: 7vh auto
+        grid-template-rows: 10vh 10vh auto
+        grid-template-areas: ". socials" "contact ."
+        align-items: center
+        width: 100vw
+        height: 100vh
+
+      .contact
+        grid-area: contact
+        justify-self: center
+        a
+          writing-mode: vertical-lr
+
+      .socials
+        grid-area: socials
+        justify-self: start
+
+      .title
+        grid-area: 1 / 1 / 4 / 3
+        justify-self: center
+
+
+  //–––––––––––––––––––––––––––
+  //        Animations
+  //–––––––––––––––––––––––––––
 
   #flicker
     animation: flicker 7s 1 forwards
