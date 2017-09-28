@@ -34,7 +34,6 @@ export default {
 
 
 <style lang="sass" scoped>
-
   // –––––––––––––––––––––––––––
   //      Colors & Mixins
   // –––––––––––––––––––––––––––
@@ -91,7 +90,7 @@ export default {
     h5
       font-size: 16px
       color: white
-      font-family: 'Anton', sans-serif
+      font-family: 'Roboto', sans-serif
       letter-spacing: 1px
 
   @media screen and (max-width: 499px)
@@ -101,15 +100,13 @@ export default {
   // –––––––––––––––––––––––––––
   //        General Styles
   // –––––––––––––––––––––––––––
-  *
-    background-color: $bg-color
 
   .title
     text-align: center
     transform: skewX(-6deg) rotate(-12deg) skewY(6deg) skewX(-12deg)
 
   //–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-  //   If no grid support, limit width to 50em & center align
+  //   Grid layout for small screen
   //–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
   @media screen and (max-width: 499px)
     .site
