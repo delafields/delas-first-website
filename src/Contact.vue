@@ -84,9 +84,9 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 	-webkit-box-direction: normal
 	-ms-flex-direction: column
 
-//–––––––––––––––––––––––––––––––––-
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //				General Styles
-//––––––––––––––––––––––––––––––––––
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 .site
 	display: grid
 	grid-template-columns: 10vw 80vw 10vw
@@ -105,9 +105,9 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 .content-item
   padding: 10px 0
 
-//–––––––––––––––––––––––––––––––––-
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //					Typography
-//––––––––––––––––––––––––––––––––––
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 h1
 	font-family: 'Monoton', cursive
 
