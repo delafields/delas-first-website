@@ -1,7 +1,13 @@
 [
 	{
+		"title": "Nokiacoin",
+		"description":
+			"A twitter bot that tweets the current price of BTC in terms of Nokia cellphone models",
+		"url": "https://twitter.com/Nokiacoin"
+	},
+	{
 		"title": "Standing Desk",
-		"description": "A little stand to let me stand.",
+		"description": "A little stand to let me stand",
 		"url": "https://imgur.com/a/PxWC6"
 	},
 	{
@@ -10,10 +16,9 @@
 		"url": "https://imgur.com/a/dHMST"
 	},
 	{
-		"title": "The Earth",
-		"description":
-			"Lorem ipsum dolor sit amet, habeo nostro an has. Ridens dictas noluisse ut ius",
-		"url": "www.google.com"
+		"title": "Personal Site",
+		"description": "Don't click this....you're already here",
+		"url": "http://jfields.me/#/confusion"
 	},
 	{
 		"title": "The internet",

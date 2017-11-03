@@ -91,6 +91,9 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 	@include column-flex
 	overflow: scroll
 
+.content-item
+	width: 70%
+
 .project-description
 		padding-bottom: 5px
 
