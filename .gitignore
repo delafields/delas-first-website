@@ -6,10 +6,6 @@ yarn-error.log
 
 TestPage.vue
 build.js.map
-.babelrc
-package-lock.json
-package.json
-webpack.config.js
 
 # Editor directories and files
 .idea
