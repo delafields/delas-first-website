@@ -143,6 +143,11 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 //					>= Tablet Styles
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 @media screen and (max-width: 800px)
+	.site
+		grid-template-columns: 10vw 80vw 10vw
+		grid-template-rows: 10vh 65vh 10vh 10vh
+		grid-template-areas: ". title ." "content content content" "footer footer footer" ". . ."
+
 	.content
 	  @for $i from 1 through length($colors)
 	    .content-item:nth-child(#{length($colors)}n+#{$i+1})
@@ -155,13 +160,9 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 @media screen and (max-width: 500px)
 	/*			Layout/General			*/
-	.site
-		grid-template-columns: 10vw 80vw 10vw
-		grid-template-rows: 10vh 65vh 10vh 10vh
-		grid-template-areas: ". title ." "content content content" "footer footer footer" ". . ."
-
 	.content-item
 	  padding: 5px 0
+
 	/*			Typography			*/
 	.social-name
 		font-size: 50px
