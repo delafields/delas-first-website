@@ -99,9 +99,6 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 	@include center-flex
 	@include column-flex
 
-.content-item
-  padding: 10px 0
-
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //					Large Screen Styles
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
@@ -128,6 +125,8 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 	        color: lighten(nth($colors, $i), 20%)
 	        cursor: pointer
 
+	.content-item
+	  padding: 10px 0
 
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //					Mobile & Tablet Styles
@@ -142,6 +141,9 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 	/*			Typography			*/
 	.social-name
 		font-size: 50px
+
+	.content-item
+	  padding: 5px 0
 
 @media screen and (max-width: 800px)
 	.content

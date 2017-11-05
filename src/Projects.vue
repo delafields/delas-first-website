@@ -1,4 +1,4 @@
-<template>
+	<template>
 	<div class="site">
 
 		<div class="title">
@@ -116,8 +116,8 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 @media screen and (max-width: 500px)
 	.site
 		grid-template-columns: 10vw 80vw 10vw
-		grid-template-rows: 10vh 5vh 60vh 5vh 10vh 10vh
-		grid-template-areas: ". title ." ". . ." ". content ." ". . ." "footer footer footer" ". . ."
+		grid-template-rows: 10vh 5vh 60vh 10vh 10vh
+		grid-template-areas: ". title ." ". . ." ". content ." "footer footer footer" ". . ."
 
 	.project-title
 		color: $yeller
