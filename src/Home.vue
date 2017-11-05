@@ -59,7 +59,10 @@ export default {
 //			General Styles
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 .site
+	height: 100vh
+	width: 100vw
 	display: grid
+	grid-template-columns: auto
 
 .content
 	grid-area: content
@@ -80,9 +83,8 @@ export default {
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 @media screen and (min-width: 801px)
 	.site
-		grid-template-columns: auto
 		grid-template-rows: 10vh 80vh 10vh
-		grid-template-areas: "." "content" "footer"
+		grid-template-areas: ". . ." "content content content" "footer footer footer"
 
 	.name:before
 	  content: "I BUILD THINGS"
@@ -94,9 +96,8 @@ export default {
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 @media screen and (max-width: 800px)
 	.site
-		grid-template-columns: 100vw
 		grid-template-rows: 10vh 70vh 10vh 10vh
-		grid-template-areas: "." "content" "footer" "."
+		grid-template-areas: ". . ." "content content content" "footer footer footer" ". . ."
 
 	.name:before
 		content: "JEREMY FIELDS"
