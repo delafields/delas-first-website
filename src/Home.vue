@@ -90,7 +90,7 @@ export default {
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 @media screen and (max-width: 800px)
 	.site
-		grid-template-rows: 80vh 10vh 10vh
+		grid-template-rows: 75vh 10vh 10vh
 		grid-template-areas: "content" "footer" "."
 
 	.title
