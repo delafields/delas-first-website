@@ -89,9 +89,6 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 .site
 	display: grid
-	grid-template-columns: 10vw 80vw 10vw
-	grid-template-rows: 10vh 80vh 10vh
-	grid-template-areas: ". title ." "content content content" "footer footer footer"
 
 .title
 	grid-area: title
@@ -106,30 +103,62 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
   padding: 10px 0
 
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
-//					Typography
+//					Large Screen Styles
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+/*			Layout			*/
+.site
+	grid-template-columns: 10vw 80vw 10vw
+	grid-template-rows: 10vh 80vh 10vh
+	grid-template-areas: ". title ." "content content content" "footer footer footer"
+
+/*			Typography			*/
+.page-title
+	font-size: 40px
+
+.social-name
+	font-size: 70px
+	-webkit-transition: color 0.3s ease-in-out
+	transition: color 0.3s ease-in-out
+@media screen and (min-width: 800px)
+	.content
+	  @for $i from 1 through length($colors)
+	    .content-item:nth-child(#{length($colors)}n+#{$i+1})
+	      a:hover
+	        color: lighten(nth($colors, $i), 20%)
+	        cursor: pointer
+
+
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+//					Mobile & Tablet Styles
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+@media screen and (max-width: 500px)
+	/*			Layout			*/
+	.site
+		grid-template-columns: 10vw 80vw 10vw
+		grid-template-rows: 10vh 70vh 10vh 44px
+		grid-template-areas: ". title ." "content content content" "footer footer footer" ". . ."
+
+	/*			Typography			*/
+	.social-name
+		font-size: 60px
+
+@media screen and (max-width: 800px)
+	.content
+	  @for $i from 1 through length($colors)
+	    .content-item:nth-child(#{length($colors)}n+#{$i+1})
+	      a
+	        color: lighten(nth($colors, $i), 20%)
+	        cursor: pointer
+
+
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+//					General Typography
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 h1
 	font-family: 'Monoton', cursive
 
-.page-title
-	font-size: 40px
-
-.content
-  @for $i from 1 through length($colors)
-    .content-item:nth-child(#{length($colors)}n+#{$i+1})
-      a:hover
-        color: lighten(nth($colors, $i), 20%)
-        cursor: pointer
-
 .social-name
-	font-size: 70px
 	text-decoration: none
-	-webkit-transition: color 0.3s ease-in-out
-	transition: color 0.3s ease-in-out
 	&:visited
 		color: black
-
-@media screen and (max-width: 370px)
-	.social-name
-		font-size: 60px
 </style>
