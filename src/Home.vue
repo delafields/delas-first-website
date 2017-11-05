@@ -58,8 +58,6 @@ export default {
 .site
 	display: grid
 	grid-template-columns: 100vw
-	grid-template-rows: 10vh 80vh 10vh
-	grid-template-areas: "." "content" "footer"
 
 .content
 	grid-area: content
@@ -74,6 +72,30 @@ export default {
 
 .name
 	padding: 0 40px
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+//					Large Screen Styles
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+@media screen and (min-width: 801px)
+	.site
+		grid-template-rows: 10vh 80vh 10vh
+		grid-template-areas: "." "content" "footer"
+
+	.name:before
+	  content: "I BUILD THINGS"
+	  -webkit-animation: nameFade 10s forwards 1
+	  				animation: nameFade 10s forwards 1
+
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+//			Mobile/Tablet Styles
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+@media screen and (max-width: 800px)
+	.site
+		grid-template-rows: 10vh 70vh 10vh 10vh
+		grid-template-areas: "." "content" "footer" "."
+
+	.name:before
+	  content: "JEREMY FIELDS"
+
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //					Typography
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
@@ -122,11 +144,6 @@ export default {
     color: rgba(255, 255, 255, 0.95)
   100%
     color: rgba(255, 255, 255, 0.95)
-
-.name:before
-  content: "I BUILD THINGS"
-  -webkit-animation: nameFade 10s forwards 1
-  				animation: nameFade 10s forwards 1
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //			Stars Animation
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––

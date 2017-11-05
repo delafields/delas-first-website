@@ -29,7 +29,7 @@ export default {
   @mixin footer-link-typography
     color: black
     font-family: 'News Cycle', sans-serif
-    font-size: 20px
+    font-size: 30px
     text-decoration: none
 
   .footer
@@ -58,6 +58,4 @@ export default {
   @media screen and (max-width: 800px)
     .footer
       justify-content: space-around
-    .footer-link
-      font-size: 30px
 </style>
