@@ -2,7 +2,6 @@
 	<div class="site">
 
 		<div class="content">
-
 			<div class="title">
 				<h1 class="name"></h1>
 				<div class="sky">
@@ -26,6 +25,7 @@
 
 <script>
 import Footer from './shared/Footer.vue';
+
 export default {
 	components: {
 		sharedFooter: Footer
@@ -43,6 +43,7 @@ export default {
 	-webkit-box-pack: center
 	display: -ms-flexbox
 	-ms-flex-align: center
+
 	-ms-flex-pack: center
 @mixin sky-shape-color
   clip-path: polygon(50% 0%, 83% 12%, 93% 37%, 88% 81%, 68% 100%, 32% 100%, 10% 82%, 7% 37%, 17% 12%)
@@ -55,21 +56,22 @@ export default {
 //			General Styles
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 .site
-	height: 100vh
-	width: 100vw
 	display: grid
-	grid-template-columns: auto
+	grid-template-columns: 100vw
 	grid-template-rows: 10vh 80vh 10vh
-	grid-template-areas: ". . ." "content content content" "footer footer footer"
+	grid-template-areas: "." "content" "footer"
+
 .content
 	grid-area: content
 	@include center-flex
+
 .title
 	@include sky-shape-color
 	width: 80%
 	height: 45%
 	@include center-flex
 	text-align: center
+
 .name
 	padding: 0 40px
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
@@ -101,6 +103,7 @@ export default {
     color: rgba(255, 255, 255, 0.95)
   100%
     color: rgba(255, 255, 255, 0.95)
+
 @keyframes nameFade
   0%
     content: "JEREMY FIELDS"
@@ -119,6 +122,7 @@ export default {
     color: rgba(255, 255, 255, 0.95)
   100%
     color: rgba(255, 255, 255, 0.95)
+
 .name:before
   content: "I BUILD THINGS"
   -webkit-animation: nameFade 10s forwards 1
@@ -136,11 +140,13 @@ $numStarOneStars: 1700
 $numStarTwoStars: 700
 $numStarThreeStars: 200
 $width: 100%
+
 @function create-stars($n)
   $stars: "#{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF"
   @for $i from 2 through $n
     $stars: "#{$stars} , #{random($starFieldWidth)}px #{random($starFieldHeight)}px #FFF"
   @return unquote($stars)
+
 @mixin star-template($numStars, $starSize, $scrollSpeed)
   z-index: 10
   width: $starSize
@@ -161,12 +167,14 @@ $width: 100%
     background: transparent
     -webkit-box-shadow: create-stars($numStars)
 		    		box-shadow: create-stars($numStars)
+
 .stars
   @include star-template($numStarOneStars, 1px, $starOneScrollDuration)
 .stars1
   @include star-template($numStarTwoStars, 2px, $starTwoScrollDuration)
 .stars2
   @include star-template($numStarThreeStars, 3px, $starThreeScrollDuration)
+
 @-webkit-keyframes animStar
   from
     transform: translateY(0px)
@@ -176,6 +184,7 @@ $width: 100%
     transform: translateY(-#{$starFieldHeight}px) translateX(-#{$starFieldWidth}px)
     -webkit-transform: translateY(-#{$starFieldHeight}px) translateX(-#{$starFieldWidth}px)
     -ms-transform: translateY(-#{$starFieldHeight}px) translateX(-#{$starFieldWidth}px)
+
 @keyframes animStar
   from
     transform: translateY(0px)

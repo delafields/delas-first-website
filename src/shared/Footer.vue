@@ -35,7 +35,6 @@ export default {
   .footer
   	grid-area: footer
   	display: flex
-  	justify-content: space-between
   	align-items: center
 
   .footer-link
@@ -45,6 +44,8 @@ export default {
       text-shadow: none
 
   @media screen and (min-width: 801px)
+    .footer
+      justify-content: space-between
     .footer-link
       -webkit-transition: text-shadow .2s ease-in-out
       -o-transition: text-shadow .2s ease-in-out
@@ -55,6 +56,8 @@ export default {
         @include footer-shadow-right
 
   @media screen and (max-width: 800px)
+    .footer
+      justify-content: space-around
     .footer-link
       font-size: 30px
 </style>
