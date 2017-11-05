@@ -90,8 +90,11 @@ export default {
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 @media screen and (max-width: 800px)
 	.site
-		grid-template-rows: 10vh 70vh 10vh 10vh
-		grid-template-areas: "." "content" "footer" "."
+		grid-template-rows: 80vh 10vh 10vh
+		grid-template-areas: "content" "footer" "."
+
+	.title
+		width: 90%
 
 	.name:before
 	  content: "JEREMY FIELDS"
