@@ -148,6 +148,9 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 		grid-template-rows: 10vh 65vh 10vh 10vh
 		grid-template-areas: ". title ." "content content content" "footer footer footer" ". . ."
 
+	.social-name
+		font-size: 60px
+
 	.content
 	  @for $i from 1 through length($colors)
 	    .content-item:nth-child(#{length($colors)}n+#{$i+1})
