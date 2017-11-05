@@ -102,6 +102,9 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //					Typography
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+.page-title
+	font-size: 40px
+
 .page-title, .social-name
 	font-family: 'Monoton', cursive
 
@@ -113,7 +116,7 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //					Large Screen Styles
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
-@media screen and (min-width: 800px)
+@media screen and (min-width: 801px)
 	/*			Layout/General			*/
 	.site
 		grid-template-columns: 10vw 80vw 10vw
@@ -124,9 +127,6 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 	  padding: 10px 0
 
 	/*			Typography			*/
-	.page-title
-		font-size: 40px
-
 	.social-name
 		font-size: 70px
 		-webkit-transition: color 0.3s ease-in-out

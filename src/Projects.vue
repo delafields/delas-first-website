@@ -114,7 +114,7 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //					Large Screen Styles
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
-@media screen and (min-width: 800px)
+@media screen and (min-width: 801px)
 	/*	Layout/General	*/
 	.site
 		grid-template-columns: 10vw 80vw 10vw
@@ -136,7 +136,7 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //					Tablet Styles
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
-@media screen and (min-width: 501px) and (max-width: 799px)
+@media screen and (min-width: 501px) and (max-width: 800px)
 	/*	Layout/General	*/
 	.site
 		grid-template-columns: 10vw 80vw 10vw
