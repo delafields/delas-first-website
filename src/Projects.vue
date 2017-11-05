@@ -77,9 +77,6 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 .site
 	display: grid
-	grid-template-columns: 10vw 80vw 10vw
-	grid-template-rows: 10vh 5vh 70vh 5vh 10vh
-	grid-template-areas: ". title ." ". . ." ". content ." ". . ." "footer footer footer"
 
 .title
 	grid-area: title
@@ -91,11 +88,53 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 	@include column-flex
 	overflow: scroll
 
-.content-item
-	width: 70%
-
 .project-description
 		padding-bottom: 5px
+
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+//					Large Screen Styles
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+@media screen and (min-width: 800px)
+	.site
+		grid-template-columns: 10vw 80vw 10vw
+		grid-template-rows: 10vh 5vh 70vh 5vh 10vh
+		grid-template-areas: ". title ." ". . ." ". content ." ". . ." "footer footer footer"
+
+	.project-title
+		color: black
+		@include title-transition
+		&:hover
+			color: $yeller
+			@include title-shadow
+
+	.content-item
+		width: 70%
+
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+//					Mobile & Tablet Styles
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+@media screen and (max-width: 500px)
+	.site
+		grid-template-columns: 10vw 80vw 10vw
+		grid-template-rows: 10vh 5vh 60vh 5vh 10vh 10vh
+		grid-template-areas: ". title ." ". . ." ". content ." ". . ." "footer footer footer" ". . ."
+
+	.project-title
+		color: $yeller
+		@include title-shadow
+
+@media screen and (min-width: 501px) and (max-width: 799px)
+	.content-item
+		width: 70%
+
+	.project-title
+		color: $yeller
+		@include title-shadow
+
+	.site
+		grid-template-columns: 10vw 80vw 10vw
+		grid-template-rows: 10vh 5vh 60vh 5vh 10vh 10vh
+		grid-template-areas: ". title ." ". . ." ". content ." ". . ." "footer footer footer" ". . ."
 
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //					Typography
@@ -103,14 +142,10 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 .page-title, .project-title
 	font-family: 'Monoton', cursive
 	font-size: 40px
-	color: black
 	text-decoration: none
 
-.project-title
-	@include title-transition
-	&:hover
-		color: $yeller
-		@include title-shadow
+.page-title
+	color: black
 
 .project-description
 	font-size: 20px

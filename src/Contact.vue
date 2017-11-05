@@ -119,11 +119,12 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 	font-size: 70px
 	-webkit-transition: color 0.3s ease-in-out
 	transition: color 0.3s ease-in-out
+
 @media screen and (min-width: 800px)
 	.content
 	  @for $i from 1 through length($colors)
 	    .content-item:nth-child(#{length($colors)}n+#{$i+1})
-	      a:hover
+	      .social-name:hover
 	        color: lighten(nth($colors, $i), 20%)
 	        cursor: pointer
 
@@ -135,18 +136,18 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 	/*			Layout			*/
 	.site
 		grid-template-columns: 10vw 80vw 10vw
-		grid-template-rows: 10vh 65vh 10vh 44px
+		grid-template-rows: 10vh 70vh 10vh 10vh
 		grid-template-areas: ". title ." "content content content" "footer footer footer" ". . ."
 
 	/*			Typography			*/
 	.social-name
-		font-size: 40px
+		font-size: 50px
 
 @media screen and (max-width: 800px)
 	.content
 	  @for $i from 1 through length($colors)
 	    .content-item:nth-child(#{length($colors)}n+#{$i+1})
-	      a
+	      .social-name
 	        color: lighten(nth($colors, $i), 20%)
 	        cursor: pointer
 
@@ -154,7 +155,7 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //					General Typography
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
-h1
+.page-title, .social-name
 	font-family: 'Monoton', cursive
 
 .social-name
