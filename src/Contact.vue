@@ -135,7 +135,7 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 	/*			Layout			*/
 	.site
 		grid-template-columns: 10vw 80vw 10vw
-		grid-template-rows: 10vh 60vh 10vh 10vh
+		grid-template-rows: 10vh 65vh 10vh 10vh
 		grid-template-areas: ". title ." "content content content" "footer footer footer" ". . ."
 
 	/*			Typography			*/
