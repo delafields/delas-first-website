@@ -159,6 +159,6 @@ h1
 
 .social-name
 	text-decoration: none
-	&:visited
+	&:visited, &:active
 		color: black
 </style>

@@ -40,16 +40,21 @@ export default {
 
   .footer-link
     @include footer-link-typography
-    -webkit-transition: text-shadow .2s ease-in-out
-    -o-transition: text-shadow .2s ease-in-out
-    transition: text-shadow .2s ease-in-out
     padding: 0 30px
-    &:first-child:hover
-      @include footer-shadow-left
-    &:last-child:hover
-      @include footer-shadow-right
+    &:visited, &:active
+      text-shadow: none
 
-  @media screen and (max-width: 799px)
+  @media screen and (min-width: 801px)
+    .footer-link
+      -webkit-transition: text-shadow .2s ease-in-out
+      -o-transition: text-shadow .2s ease-in-out
+      transition: text-shadow .2s ease-in-out
+      &:first-child:hover
+        @include footer-shadow-left
+      &:last-child:hover
+        @include footer-shadow-right
+
+  @media screen and (max-width: 800px)
     .footer-link
       font-size: 30px
 </style>
