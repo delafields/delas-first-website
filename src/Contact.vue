@@ -85,7 +85,7 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 	-ms-flex-direction: column
 
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
-//				General Styles
+//					General Styles
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 .site
 	display: grid
@@ -100,62 +100,7 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 	@include column-flex
 
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
-//					Large Screen Styles
-//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
-/*			Layout			*/
-.site
-	grid-template-columns: 10vw 80vw 10vw
-	grid-template-rows: 10vh 80vh 10vh
-	grid-template-areas: ". title ." "content content content" "footer footer footer"
-
-/*			Typography			*/
-.page-title
-	font-size: 40px
-
-.social-name
-	font-size: 70px
-	-webkit-transition: color 0.3s ease-in-out
-	transition: color 0.3s ease-in-out
-
-@media screen and (min-width: 800px)
-	.content
-	  @for $i from 1 through length($colors)
-	    .content-item:nth-child(#{length($colors)}n+#{$i+1})
-	      .social-name:hover
-	        color: lighten(nth($colors, $i), 20%)
-	        cursor: pointer
-
-	.content-item
-	  padding: 10px 0
-
-//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
-//					Mobile & Tablet Styles
-//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
-@media screen and (max-width: 500px)
-	/*			Layout			*/
-	.site
-		grid-template-columns: 10vw 80vw 10vw
-		grid-template-rows: 10vh 65vh 10vh 10vh
-		grid-template-areas: ". title ." "content content content" "footer footer footer" ". . ."
-
-	/*			Typography			*/
-	.social-name
-		font-size: 50px
-
-	.content-item
-	  padding: 5px 0
-
-@media screen and (max-width: 800px)
-	.content
-	  @for $i from 1 through length($colors)
-	    .content-item:nth-child(#{length($colors)}n+#{$i+1})
-	      .social-name
-	        color: lighten(nth($colors, $i), 20%)
-	        cursor: pointer
-
-
-//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
-//					General Typography
+//					Typography
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 .page-title, .social-name
 	font-family: 'Monoton', cursive
@@ -164,4 +109,61 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 	text-decoration: none
 	&:visited, &:active
 		color: black
+
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+//					Large Screen Styles
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+@media screen and (min-width: 800px)
+	/*			Layout/General			*/
+	.site
+		grid-template-columns: 10vw 80vw 10vw
+		grid-template-rows: 10vh 80vh 10vh
+		grid-template-areas: ". title ." "content content content" "footer footer footer"
+
+	.content-item
+	  padding: 10px 0
+
+	/*			Typography			*/
+	.page-title
+		font-size: 40px
+
+	.social-name
+		font-size: 70px
+		-webkit-transition: color 0.3s ease-in-out
+		transition: color 0.3s ease-in-out
+
+	.content
+	  @for $i from 1 through length($colors)
+	    .content-item:nth-child(#{length($colors)}n+#{$i+1})
+	      .social-name:hover
+	        color: lighten(nth($colors, $i), 20%)
+	        cursor: pointer
+
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+//					>= Tablet Styles
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+@media screen and (max-width: 800px)
+	.content
+	  @for $i from 1 through length($colors)
+	    .content-item:nth-child(#{length($colors)}n+#{$i+1})
+	      .social-name
+	        color: lighten(nth($colors, $i), 20%)
+	        cursor: pointer
+
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+//					Mobile Styles
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+@media screen and (max-width: 500px)
+	/*			Layout/General			*/
+	.site
+		grid-template-columns: 10vw 80vw 10vw
+		grid-template-rows: 10vh 65vh 10vh 10vh
+		grid-template-areas: ". title ." "content content content" "footer footer footer" ". . ."
+
+	.content-item
+	  padding: 5px 0
+	/*			Typography			*/
+	.social-name
+		font-size: 50px
+
 </style>

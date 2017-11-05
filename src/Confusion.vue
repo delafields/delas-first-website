@@ -19,6 +19,21 @@ export default {};
 $shadow-red: rgba(255, 23, 68, 0.60)
 $shadow-white: rgba(255, 255, 255, 0.4)
 
+@mixin prefixed-flex
+  grid-area: header
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: justify
+  -ms-flex-pack: justify
+  justify-content: space-between
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+//					General Styles
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 .site
   grid-template-columns: 10vw 80vw 10vw
   grid-template-rows: 20vh 80vh
@@ -26,16 +41,26 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 
 .header
   grid-area: header
-  display: flex
-  justify-content: space-between
-  align-items: center
+  @include prefixed-flex
 
+.header-link
+  padding: 20px
+
+.spiral
+  grid-area: spiral
+  width: 100%
+  height: 100%
+  animation: spinMe 8s forwards linear infinite
+  -webkit-animation: spinMe 8s forwards linear infinite
+
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+//					Typography
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 .header-link
   color: black
   font-family: 'News Cycle', sans-serif
   font-size: 20px
   text-decoration: none
-  padding: 20px
   -webkit-transition: text-shadow .2s ease-in-out
   -o-transition: text-shadow .2s ease-in-out
   transition: text-shadow .2s ease-in-out
@@ -45,16 +70,19 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 .right:hover
   text-shadow: -4px 3px 3px $shadow-red, -1px 1px 3px $shadow-white
 
-.spiral
-  grid-area: spiral
-  width: 100%
-  height: 100%
-  animation: spinMe 8s forwards linear infinite
 
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
+//					Animations
+//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 @keyframes spinMe
   0%
     transform: rotate(0turn)
   100%
     transform: rotate(1turn)
 
+@-webkit-keyframes spinMe
+  0%
+    transform: rotate(0turn)
+  100%
+    transform: rotate(1turn)
 </style>
