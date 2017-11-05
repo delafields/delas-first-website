@@ -135,12 +135,12 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 	/*			Layout			*/
 	.site
 		grid-template-columns: 10vw 80vw 10vw
-		grid-template-rows: 10vh 70vh 10vh 44px
+		grid-template-rows: 10vh 65vh 10vh 44px
 		grid-template-areas: ". title ." "content content content" "footer footer footer" ". . ."
 
 	/*			Typography			*/
 	.social-name
-		font-size: 60px
+		font-size: 40px
 
 @media screen and (max-width: 800px)
 	.content
