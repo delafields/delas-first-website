@@ -60,8 +60,6 @@ export default {
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 .site
 	display: grid
-	height: 100vh
-	width: 100vw
 	grid-template-columns: auto
 
 .content
