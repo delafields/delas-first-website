@@ -1,5 +1,11 @@
 [
 	{
+		"title": "Favorite Music",
+		"description":
+			"A Web App that allows you to see your favorite Spotify music (artists, genres, and tracks) over three time periods.",
+		"url": "https://favorite-music.herokuapp.com"
+	},
+	{
 		"title": "Nokiacoin",
 		"description":
 			"A twitter bot that tweets the current price of BTC in terms of Nokia cellphone models",
