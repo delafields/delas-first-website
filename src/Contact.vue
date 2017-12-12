@@ -98,6 +98,9 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 	@include center-flex
 	@include column-flex
 
+.social-name
+	cursor: pointer
+
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //					Typography
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
@@ -129,11 +132,11 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 		transition: color 0.3s ease-in-out
 
 	.content
-	  @for $i from 1 through length($colors)
-	    .content-item:nth-child(#{length($colors)}n+#{$i+1})
-	      .social-name:hover
-	        color: lighten(nth($colors, $i), 20%)
-	        cursor: pointer
+		@each $color in $colors
+			$i: index($colors, $color)
+			.content-item:nth-of-type(#{$i})
+				.social-name:hover
+					color: lighten(nth($colors, $i), 20%)
 
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //					 Tablet/Mobile Styles
@@ -145,10 +148,10 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 		grid-template-areas: ". title ." "content content content" "footer footer footer" ". . ."
 
 	.content
-	  @for $i from 1 through length($colors)
-	    .content-item:nth-child(#{length($colors)}n+#{$i+1})
-	      .social-name
-	        color: lighten(nth($colors, $i), 20%)
-	        cursor: pointer
+		@each $color in $colors
+			$i: index($colors, $color)
+			.content-item:nth-of-type(#{$i})
+				.social-name
+					color: lighten(nth($colors, $i), 20%)
 
 </style>
