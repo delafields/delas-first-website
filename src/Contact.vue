@@ -6,7 +6,6 @@
 		</div>
 
 		<div class="content">
-      <hr>
 			<div v-for="social in SocialLinks" class="content-item">
 				<a :href="social.url" class="social-name"><h1>{{social.name}}</h1></a>
 			</div>
@@ -109,6 +108,7 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 	font-family: 'Monoton', cursive
 
 .social-name
+	font-size: 20px
 	text-decoration: none
 	&:visited, &:active
 		color: black
@@ -123,12 +123,8 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 		grid-template-rows: 10vh 80vh 10vh
 		grid-template-areas: ". title ." "content content content" "footer footer footer"
 
-	.content-item
-	  padding: 10px 0
-
 	/*			Typography			*/
 	.social-name
-		font-size: 70px
 		-webkit-transition: color 0.3s ease-in-out
 		transition: color 0.3s ease-in-out
 
@@ -140,7 +136,7 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 	        cursor: pointer
 
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
-//					>= Tablet Styles
+//					 Tablet/Mobile Styles
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 @media screen and (max-width: 800px)
 	.site
@@ -148,26 +144,11 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 		grid-template-rows: 10vh 65vh 10vh 10vh
 		grid-template-areas: ". title ." "content content content" "footer footer footer" ". . ."
 
-	.social-name
-		font-size: 60px
-
 	.content
 	  @for $i from 1 through length($colors)
 	    .content-item:nth-child(#{length($colors)}n+#{$i+1})
 	      .social-name
 	        color: lighten(nth($colors, $i), 20%)
 	        cursor: pointer
-
-//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
-//					Mobile Styles
-//–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
-@media screen and (max-width: 500px)
-	/*			Layout/General			*/
-	.content-item
-	  padding: 5px 0
-
-	/*			Typography			*/
-	.social-name
-		font-size: 50px
 
 </style>
