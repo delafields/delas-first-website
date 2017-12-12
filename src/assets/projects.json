@@ -1,9 +1,26 @@
 [
 	{
-		"title": "Favorite Music",
+		"title": "Pomodoro App",
+		"description": "Preact PWA pomodoro clock to help my reverse ADD.",
+		"url": "https://github.com/delafields/pomo-clock"
+	},
+	{
+		"title": "Smart Mirror",
 		"description":
-			"A Web App that allows you to see your favorite Spotify music (artists, genres, and tracks) over three time periods.",
-		"url": "https://favorite-music.herokuapp.com"
+			"Mirror that displays stock tickers, calendar, weather, and news from top papers. (And my pretty face)",
+		"url": "https://github.com/delafields/smartmirror-react"
+	},
+	{
+		"title": "HODLCON",
+		"description":
+			"The official DEFCON but for cryptocurrencies. (Really just a list of hacks in the space.)",
+		"url": "http://hodl.netlify.com/"
+	},
+	{
+		"title": "Favoritify",
+		"description":
+			"A Web App that allows you to see your favorite Spotify music (artists, genres, and tracks, audio features) over three time periods.",
+		"url": "http://favoritify.herokuapp.com"
 	},
 	{
 		"title": "Nokiacoin",
@@ -25,47 +42,5 @@
 		"title": "Personal Site",
 		"description": "Don't click this....you're already here",
 		"url": "http://jfields.me/#/confusion"
-	},
-	{
-		"title": "The internet",
-		"description":
-			"Lorem ipsum dolor sit amet, habeo nostro an has. Ridens dictas noluisse ut ius",
-		"url": "www.google.com"
-	},
-	{
-		"title": "The Earth",
-		"description":
-			"Lorem ipsum dolor sit amet, habeo nostro an has. Ridens dictas noluisse ut ius",
-		"url": "www.google.com"
-	},
-	{
-		"title": "The internet",
-		"description":
-			"Lorem ipsum dolor sit amet, habeo nostro an has. Ridens dictas noluisse ut ius",
-		"url": "www.google.com"
-	},
-	{
-		"title": "The Earth",
-		"description":
-			"Lorem ipsum dolor sit amet, habeo nostro an has. Ridens dictas noluisse ut ius",
-		"url": "www.google.com"
-	},
-	{
-		"title": "The internet",
-		"description":
-			"Lorem ipsum dolor sit amet, habeo nostro an has. Ridens dictas noluisse ut ius",
-		"url": "www.google.com"
-	},
-	{
-		"title": "The internet",
-		"description":
-			"Lorem ipsum dolor sit amet, habeo nostro an has. Ridens dictas noluisse ut ius",
-		"url": "www.google.com"
-	},
-	{
-		"title": "The internet",
-		"description":
-			"Lorem ipsum dolor sit amet, habeo nostro an has. Ridens dictas noluisse ut ius",
-		"url": "www.google.com"
 	}
 ]
