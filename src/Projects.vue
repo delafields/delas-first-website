@@ -6,7 +6,7 @@
 		</div>
 
 		<div class="content">
-			<div class="content-item" v-for="project in Projects">
+			<div class="content-item" v-for="project in randomList(Projects)">
 				<a class="project-title" :href="project.url">{{project.title}}</a>
 				<br>
 				<h2 class="project-description">{{project.description}}</h2>
@@ -37,6 +37,34 @@ export default {
 		return {
 			Projects: json
 		};
+	},
+	methods: {
+		// Randomizes project order
+		randomList: function(array) {
+			let currentIndex = array.length;
+			let temporaryValue;
+			let randomIndex;
+			let myRandomizedList;
+
+			// Clone the original array into myRandomizedList (shallow copy of array)
+			myRandomizedList = array.slice(0);
+
+			// Randomize elements within the myRandomizedList - the shallow copy of original array
+			// While there remain elements to shuffle...
+			while (0 !== currentIndex) {
+				// Pick a remaining element...
+				randomIndex = Math.floor(Math.random() * currentIndex);
+				currentIndex -= 1;
+
+				// And swap it with the current element.
+				temporaryValue = myRandomizedList[currentIndex];
+				myRandomizedList[currentIndex] = myRandomizedList[randomIndex];
+				myRandomizedList[randomIndex] = temporaryValue;
+			}
+
+			// Return the new array that has been randomized
+			return myRandomizedList;
+		}
 	}
 };
 </script>
