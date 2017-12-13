@@ -130,6 +130,7 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 	font-family: 'Monoton', cursive
 	font-size: 40px
 	text-decoration: none
+	word-break: break-all
 
 .page-title
 	color: black
