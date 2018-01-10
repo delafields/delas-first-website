@@ -2,31 +2,36 @@
 	{
 		"title": "Pomodoro App",
 		"description": "Preact PWA pomodoro clock to help my reverse ADD.",
-		"url": "https://github.com/delafields/pomo-clock"
+		"url": "https://github.com/delafields/pomo-clock",
+		"tags": ["devicon-javascript-plain", "devicon-nodejs-plain-wordmark"]
 	},
 	{
 		"title": "Smart Mirror",
 		"description":
 			"Mirror that displays stock tickers, calendar, weather, and news from top papers. (And my pretty face)",
-		"url": "https://github.com/delafields/smartmirror-react"
+		"url": "https://github.com/delafields/smartmirror-react",
+		"tags": ["devicon-react-original-wordmark"]
 	},
 	{
 		"title": "HODLCON",
 		"description":
 			"The official DEFCON but for cryptocurrencies. (Really just a list of hacks in the space.)",
-		"url": "http://hodl.netlify.com/"
+		"url": "http://hodl.netlify.com/",
+		"tags": ["devicon-javascript-plain", "devicon-nodejs-plain-wordmark"]
 	},
 	{
 		"title": "Favoritify",
 		"description":
 			"A Web App that allows you to see your favorite Spotify music (artists, genres, and tracks, audio features) over three time periods.",
-		"url": "http://favoritify.herokuapp.com"
+		"url": "http://favoritify.herokuapp.com",
+		"tags": ["devicon-react-original-wordmark", "devicon-d3js-plain"]
 	},
 	{
 		"title": "Nokiacoin",
 		"description":
 			"A twitter bot that tweets the current price of BTC in terms of Nokia cellphone models",
-		"url": "https://twitter.com/Nokiacoin"
+		"url": "https://twitter.com/Nokiacoin",
+		"tags": ["devicon-python-plain-wordmark"]
 	},
 	{
 		"title": "Standing Desk",
@@ -41,6 +46,7 @@
 	{
 		"title": "Personal Site",
 		"description": "Don't click this....you're already here",
-		"url": "http://jfields.me/#/confusion"
+		"url": "http://jfields.me/#/confusion",
+		"tags": ["devicon-vuejs-plain-wordmark", "devicon-sass-original"]
 	}
 ]

@@ -8,6 +8,7 @@
 		<div class="content">
 			<div class="content-item" v-for="project in randomList(Projects)">
 				<a class="project-title" :href="project.url">{{project.title}}</a>
+				<sharedTags class="tags-box" :tags="project.tags"></sharedTags>
 				<br>
 				<h2 class="project-description">{{project.description}}</h2>
 				<hr class="hr-style">
@@ -27,11 +28,13 @@
 
 <script>
 import Footer from './shared/Footer.vue';
+import Tags from './shared/Tags.vue';
 import json from './assets/projects.json';
 
 export default {
 	components: {
-		sharedFooter: Footer
+		sharedFooter: Footer,
+		sharedTags: Tags
 	},
 	data() {
 		return {
@@ -123,6 +126,9 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 	border-top: 1px dotted #8c8b8b
 	border-bottom: 1px dotted #fff
 
+.content-item
+	position: relative
+
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //					Typography
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
@@ -153,6 +159,16 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 	.content-item
 		width: 70%
 
+	.tags-box
+		position: absolute
+		top: 0
+		right: 0
+		display: flex
+		display: -ms-flexbox
+		max-width: 160px
+		min-width: 30px
+		height: 40px
+
 	/*	Typography	*/
 	.project-title
 		color: black
@@ -175,6 +191,9 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 	.content-item
 		width: 70%
 
+	.tags-box
+		display: none
+
 	/*	Typography	*/
 	.project-title
 		color: $yeller
@@ -189,6 +208,9 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 		grid-template-columns: 10vw 80vw 10vw
 		grid-template-rows: 10vh 5vh 60vh 10vh 10vh
 		grid-template-areas: ". title ." ". . ." ". content ." "footer footer footer" ". . ."
+
+	.tags-box
+		display: none
 
 	/* Typography */
 	.project-title
