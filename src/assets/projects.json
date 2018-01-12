@@ -1,5 +1,18 @@
 [
 	{
+		"title": "HelpPlz",
+		"description":
+			"A node executable for searching documentation, Google, npm, and Stack Overflow",
+		"url": "https://github.com/delafields/CLI/tree/master/HelpPlz",
+		"tags": ["devicon-nodejs-plain-wordmark"]
+	},
+	{
+		"title": "Screenshotta",
+		"description": "A python script for easy screenshotting",
+		"url": "https://github.com/delafields/pomo-clock",
+		"tags": ["devicon-python-plain-wordmark"]
+	},
+	{
 		"title": "Pomodoro App",
 		"description": "Preact PWA pomodoro clock to help my reverse ADD.",
 		"url": "https://github.com/delafields/pomo-clock",
