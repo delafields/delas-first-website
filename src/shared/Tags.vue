@@ -23,7 +23,8 @@ export default {
   -ms-flex-pack: end
 
 .tag-item
-  font-size: 40px
+  // each tag is 50px (including padding)
+  font-size: 30px
   padding: 0 5px
   color: black
 </style>
