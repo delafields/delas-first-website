@@ -1,9 +1,7 @@
 	<template>
 	<div class="site">
 
-		<div class="title">
-			<h1 class="page-title">Projects</h1>
-		</div>
+		<shared-title pageTitle="PROJECTS"></shared-title>
 
 		<div class="content">
 			<div class="content-item" v-for="project in randomList(Projects)">
@@ -27,12 +25,14 @@
 </template>
 
 <script>
+import Title from './shared/Title.vue';
 import Footer from './shared/Footer.vue';
 import Tags from './shared/Tags.vue';
 import json from './assets/projects.json';
 
 export default {
 	components: {
+		sharedTitle: Title,
 		sharedFooter: Footer,
 		sharedTags: Tags
 	},
@@ -109,10 +109,6 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 .site
 	display: grid
 
-.title
-	grid-area: title
-	@include center-flex
-
 .content
 	grid-area: content
 	@include center-flex
@@ -132,14 +128,11 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //					Typography
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
-.page-title, .project-title
+.project-title
 	font-family: 'Monoton', cursive
 	font-size: 40px
 	text-decoration: none
 	word-break: break-all
-
-.page-title
-	color: black
 
 .project-description
 	font-size: 20px

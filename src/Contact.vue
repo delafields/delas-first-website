@@ -1,9 +1,7 @@
 <template>
 	<div class="site">
 
-		<div class="title">
-			<h1 class="page-title">CONTACT</h1>
-		</div>
+		<shared-title pageTitle="CONTACT"></shared-title>
 
 		<div class="content">
 			<div v-for="social in SocialLinks" class="content-item">
@@ -23,10 +21,12 @@
 </template>
 
 <script>
+import Title from './shared/Title.vue';
 import Footer from './shared/Footer.vue';
 
 export default {
 	components: {
+		sharedTitle: Title,
 		sharedFooter: Footer
 	},
 	data() {
@@ -89,10 +89,6 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 .site
 	display: grid
 
-.title
-	grid-area: title
-	@include center-flex
-
 .content
 	grid-area: content
 	@include center-flex
@@ -104,13 +100,8 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //					Typography
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
-.page-title
-	font-size: 40px
-
-.page-title, .social-name
-	font-family: 'Monoton', cursive
-
 .social-name
+	font-family: 'Monoton', cursive
 	font-size: 20px
 	text-decoration: none
 	&:visited, &:active
