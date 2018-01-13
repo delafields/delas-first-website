@@ -165,6 +165,7 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 		right: 0
 		display: flex
 		display: -ms-flexbox
+		// Max 5 tabs, each is 40px
 		max-width: 200px
 		min-width: 30px
 		height: 40px
