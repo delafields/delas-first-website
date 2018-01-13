@@ -47,13 +47,9 @@
 	{
 		"title": "Nokiacoin",
 		"description":
-			"A twitter bot that tweets the current price of BTC in terms of Nokia cellphone models",
+			"A bot that tweets the current price of BTC in terms of Nokia cellphone models",
 		"url": "https://twitter.com/Nokiacoin",
-		"tags": [
-			"devicon-python-plain",
-			"devicon-amazonwebservices-original",
-			"icon-btc"
-		]
+		"tags": ["devicon-python-plain", "devicon-heroku-plain"]
 	},
 	{
 		"title": "Standing Desk",
