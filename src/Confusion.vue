@@ -1,10 +1,13 @@
 <template>
   <div class="site">
 
-    <div class="header">
-      <router-link to="/projects" class="header-link left">←Projects</router-link>
-      <a href="https://github.com/delafields/delafields.github.io" class="header-link right">View Source</a>
-    </div>
+    <shared-secret-header
+    leftLinkPath="/projects"
+    leftLinkName="←PROJECTS"
+    rightLinkPath="https://github.com/delafields/delafields.github.io"
+    rightLinkName="VIEW REPO"
+    >
+    </shared-secret-header>
 
     <img class="spiral" src="./assets/CONFUSION.png" alt="text-spiral">
 
@@ -12,7 +15,13 @@
 </template>
 
 <script>
-export default {};
+import SecretHeader from './shared/SecretHeader.vue';
+
+export default {
+	components: {
+		sharedSecretHeader: SecretHeader
+	}
+};
 </script>
 
 <style lang="sass" scoped>
