@@ -10,7 +10,7 @@
 		"title": "Screenshotta",
 		"description": "A python script for easy screenshotting",
 		"url": "https://github.com/delafields/pomo-clock",
-		"tags": ["devicon-python-plain-wordmark"]
+		"tags": ["devicon-python-plain"]
 	},
 	{
 		"title": "Pomodoro",
@@ -23,11 +23,7 @@
 		"description":
 			"Mirror that displays stock tickers, calendar, weather, and news from multiple publications running on a Raspberry Pi",
 		"url": "https://github.com/delafields/smartmirror-react",
-		"tags": [
-			"devicon-react-original-wordmark",
-			"icon-redux",
-			"icon-raspberry-pi"
-		]
+		"tags": ["devicon-react-original", "icon-redux", "icon-raspberry-pi"]
 	},
 	{
 		"title": "HODLCON",
@@ -41,11 +37,11 @@
 			"A Web App that allows you to see your favorite Spotify music (artists, genres, and tracks, audio features) over three time periods.",
 		"url": "http://favoritify.herokuapp.com",
 		"tags": [
-			"devicon-react-original-wordmark",
+			"devicon-react-original",
 			"icon-redux",
 			"devicon-d3js-plain",
-			"devicon-mongodb-plain-wordmark",
-			"devicon-express-original-wordmark"
+			"devicon-mongodb-plain",
+			"devicon-express-original"
 		]
 	},
 	{
@@ -54,7 +50,7 @@
 			"A twitter bot that tweets the current price of BTC in terms of Nokia cellphone models",
 		"url": "https://twitter.com/Nokiacoin",
 		"tags": [
-			"devicon-python-plain-wordmark",
+			"devicon-python-plain",
 			"devicon-amazonwebservices-original",
 			"icon-btc"
 		]
@@ -75,6 +71,6 @@
 		"title": "Personal Site",
 		"description": "Don't click this....you're already here",
 		"url": "http://jfields.me/#/confusion",
-		"tags": ["devicon-vuejs-plain-wordmark", "devicon-sass-original"]
+		"tags": ["devicon-vuejs-plain", "devicon-sass-original"]
 	}
 ]

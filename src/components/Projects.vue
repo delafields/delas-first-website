@@ -28,7 +28,7 @@
 import Title from './shared/Title.vue';
 import Footer from './shared/Footer.vue';
 import Tags from './shared/Tags.vue';
-import json from './assets/projects.json';
+import json from '../projects.json';
 
 export default {
 	components: {
