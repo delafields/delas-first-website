@@ -5,7 +5,7 @@
 
 		<div class="content">
 			<div v-for="social in SocialLinks" class="content-item">
-				<a :href="social.url" class="social-name"><h1>{{social.name}}</h1></a>
+				<a :href="social.url" class="social-name">{{social.name}}</a>
 			</div>
 		</div>
 
@@ -94,6 +94,9 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 	@include center-flex
 	@include column-flex
 
+.content-item
+	margin: 15px 0
+
 .social-name
 	cursor: pointer
 
@@ -102,8 +105,9 @@ $colors: $github-blue, $twitter-blue, $medium-green, $google-red, $resume-purple
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 .social-name
 	font-family: 'Monoton', cursive
-	font-size: 20px
+	font-size: 40px
 	text-decoration: none
+	color: black
 	&:visited, &:active
 		color: black
 
