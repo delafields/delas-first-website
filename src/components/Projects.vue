@@ -3,13 +3,22 @@
 
 		<shared-title pageTitle="PROJECTS"></shared-title>
 
+		<div class="sorter">
+			<h6>Sort By: </h6>
+			<button @click="projectCategory = 'both'" class="sort-button">All</button>
+			<button @click="toggleShowCode" class="sort-button">Code</button>
+			<button @click="toggleShowPhysical" class="sort-button">Physical</button>
+		</div>
+
 		<div class="content">
 			<div class="content-item" v-for="project in randomList(Projects)">
-				<a class="project-title" :href="project.url">{{project.title}}</a>
-				<sharedTags class="tags-box" :tags="project.tags"></sharedTags>
-				<br>
-				<h2 class="project-description">{{project.description}}</h2>
-				<hr class="hr-style">
+				<template v-if="(project.type === projectCategory || projectCategory === 'both')">
+					<a class="project-title" :href="project.url">{{project.title}}</a>
+					<sharedTags class="tags-box" :tags="project.tags"></sharedTags>
+					<br>
+					<h2 class="project-description">{{project.description}}</h2>
+					<hr class="hr-style">
+				</template>
 			</div>
 		</div>
 
@@ -38,10 +47,21 @@ export default {
 	},
 	data() {
 		return {
-			Projects: json
+			Projects: json,
+			projectCategory: 'both'
 		};
 	},
 	methods: {
+		toggleShowCode: function() {
+			this.projectCategory === 'code'
+				? (this.projectCategory = 'both')
+				: (this.projectCategory = 'code');
+		},
+		toggleShowPhysical: function() {
+			this.projectCategory === 'physical'
+				? (this.projectCategory = 'both')
+				: (this.projectCategory = 'physical');
+		},
 		// Randomizes project order
 		randomList: function(array) {
 			let currentIndex = array.length;
@@ -90,7 +110,7 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 	display: flex
 	justify-content: center
 	align-items: center
-	display: -webkit-box
+	display: -webkit-flex
 	-webkit-box-align: center
 	-webkit-box-pack: center
 	display: -ms-flexbox
@@ -114,9 +134,10 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 	@include center-flex
 	@include column-flex
 	overflow: scroll
+	padding-top: 15px
 
 .project-description
-		padding-bottom: 5px
+	padding-bottom: 5px
 
 .hr-style
 	border-top: 1px dotted #8c8b8b
@@ -124,6 +145,18 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 
 .content-item
 	position: relative
+
+.sorter
+	grid-area: sorter
+	@include center-flex
+
+.sort-button
+	height: 30px
+	margin: 0 10px
+	background: $yeller
+	outline: none
+	border: 2px dotted white
+	cursor: pointer
 
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //					Typography
@@ -139,6 +172,15 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 	font-family: 'News Cycle', sans-serif
 	color: black
 
+.sorter
+	color: black
+	font-size: 20px
+	font-family: 'News Cycle', sans-serif
+
+.sort-button
+	color: black
+	font-family: 'News Cycle', sans-serif
+
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //					Large Screen Styles
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
@@ -147,7 +189,7 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 	.site
 		grid-template-columns: 10vw 80vw 10vw
 		grid-template-rows: 10vh 5vh 70vh 5vh 10vh
-		grid-template-areas: ". title ." ". . ." ". content ." ". . ." "footer footer footer"
+		grid-template-areas: ". title ." ". sorter ." ". content ." ". . ." "footer footer footer"
 
 	.content-item
 		width: 70%
@@ -180,7 +222,7 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 	.site
 		grid-template-columns: 10vw 80vw 10vw
 		grid-template-rows: 10vh 5vh 60vh 5vh 10vh 10vh
-		grid-template-areas: ". title ." ". . ." ". content ." ". . ." "footer footer footer" ". . ."
+		grid-template-areas: ". title ." ". sorter ." ". content ." ". . ." "footer footer footer" ". . ."
 
 	.content-item
 		width: 70%
@@ -201,10 +243,13 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 	.site
 		grid-template-columns: 10vw 80vw 10vw
 		grid-template-rows: 10vh 5vh 60vh 10vh 10vh
-		grid-template-areas: ". title ." ". . ." ". content ." "footer footer footer" ". . ."
+		grid-template-areas: ". title ." ". sorter ." ". content ." "footer footer footer" ". . ."
 
 	.tags-box
 		display: none
+
+	.content-item
+		width: 100%
 
 	/* Typography */
 	.project-title
