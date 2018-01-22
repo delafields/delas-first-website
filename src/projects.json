@@ -1,5 +1,13 @@
 [
 	{
+		"title": "Rap Adlibs",
+		"description": "An Alexa Skill for playing your favorite rapper's adlibs",
+		"type": "code",
+		"url":
+			"https://www.amazon.com/badatfun-Rap-Adlibs/dp/B078WYKNGP/ref=cm_cr_arp_d_product_top?ie=UTF8",
+		"tags": ["devicon-python-plain", "devicon-amazonwebservices-original"]
+	},
+	{
 		"title": "HelpPlz",
 		"description":
 			"A node executable for searching documentation, Google, npm, and Stack Overflow",

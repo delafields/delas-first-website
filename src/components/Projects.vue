@@ -106,7 +106,7 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 	-webkit-transition: text-shadow .1s ease-in .1s, color 0.2s ease-in
 	-o-transition: text-shadow .1s ease-in .1s, color 0.2s ease-in
 
-@mixin center-flex
+@mixin sorter-flex
 	display: flex
 	justify-content: center
 	align-items: center
@@ -117,11 +117,17 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 	-ms-flex-align: center
 	-ms-flex-pack: center
 
-@mixin column-flex
-	flex-direction: column
+@mixin content-flex
+	display: -webkit-box
+	display: -ms-flexbox
+	display: flex
 	-webkit-box-orient: vertical
 	-webkit-box-direction: normal
 	-ms-flex-direction: column
+	flex-direction: column
+	-webkit-box-align: center
+	-ms-flex-align: center
+	align-items: center
 
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //				General Styles
@@ -131,10 +137,8 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 
 .content
 	grid-area: content
-	@include center-flex
-	@include column-flex
+	@include content-flex
 	overflow: scroll
-	padding-top: 15px
 
 .project-description
 	padding-bottom: 5px
@@ -148,7 +152,7 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 
 .sorter
 	grid-area: sorter
-	@include center-flex
+	@include sorter-flex
 
 .sort-button
 	height: 30px
