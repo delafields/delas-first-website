@@ -42,7 +42,7 @@ export default {
 				},
 				{
 					name: 'Medium',
-					url: 'https://medium.com/@badatfun'
+					url: 'https://medium.com/@delafields'
 				},
 				{
 					name: 'Email',
