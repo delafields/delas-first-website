@@ -3,7 +3,7 @@
 
 		<div class="content">
 			<div class="name-wrapper">
-				<h1 class="name"></h1>
+				<h1 class="name">JEREMY FIELDS</h1>
 				<div class="sky">
 					<div class="stars"></div>
 					<div class="stars1"></div>
@@ -96,10 +96,9 @@ export default {
 	.name-wrapper
 		width: 80%
 
-	.name:before
-	  content: "I BUILD THINGS"
-	  -webkit-animation: nameFade 10s forwards 1
-	  				animation: nameFade 10s forwards 1
+	.name
+	  -webkit-animation: nameFade2 2s forwards 1
+	  				animation: nameFade2 2s forwards 1
 
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //			Mobile/Tablet Styles
@@ -112,50 +111,21 @@ export default {
 	.name-wrapper
 		width: 90%
 
-	.name:before
-	  content: "JEREMY FIELDS"
-
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //				Animations
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 /*		Title Name Fade */
-@-webkit-keyframes nameFade
-  0%
-    content: "JEREMY FIELDS"
-    color: rgba(255, 255, 255, 0.95)
-  45%
-    content: "JEREMY FIELDS"
-    color: rgba(255, 255, 255, 0.95)
-  50%
-    color: rgba(255, 255, 255, 0.0)
-  60%
-    content: "I BUILD THINGS"
-    color: rgba(255, 255, 255, 0.0)
-  61%
-    color: rgba(255, 255, 255, 0.0)
-  70%
-    color: rgba(255, 255, 255, 0.95)
-  100%
-    color: rgba(255, 255, 255, 0.95)
+@-webkit-keyframes nameFade2
+	0%
+		opacity: 0
+	100%
+		opacity: 1
 
-@keyframes nameFade
-  0%
-    content: "JEREMY FIELDS"
-    color: rgba(255, 255, 255, 0.95)
-  45%
-    content: "JEREMY FIELDS"
-    color: rgba(255, 255, 255, 0.95)
-  50%
-    color: rgba(255, 255, 255, 0.0)
-  60%
-    content: "I BUILD THINGS"
-    color: rgba(255, 255, 255, 0.0)
-  61%
-    color: rgba(255, 255, 255, 0.0)
-  70%
-    color: rgba(255, 255, 255, 0.95)
-  100%
-    color: rgba(255, 255, 255, 0.95)
+@keyframes nameFade2
+	0%
+		opacity: 0
+	100%
+		opacity: 1
 
 /*		Stars Animation		*/
 $starFieldWidth: 2560
@@ -183,8 +153,8 @@ $width: 100%
   background: transparent
   -webkit-box-shadow: createStars($numStars)
 				  box-shadow: createStars($numStars)
-  -webkit-animation: scrollStars $scrollSpeed linear infinite
-				  animation: scrollStars $scrollSpeed linear infinite
+  -webkit-animation: scrollStars $scrollSpeed linear infinite 2s
+				  animation: scrollStars $scrollSpeed linear infinite 2s
   &:after
     content: " "
     top: -$starStartOffset
