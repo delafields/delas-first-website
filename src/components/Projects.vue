@@ -5,20 +5,24 @@
 
 		<div class="sorter">
 			<h6>Sort By: </h6>
-			<button @click="projectCategory = 'both'" class="sort-button">All</button>
-			<button @click="toggleShowCode" class="sort-button">Code</button>
-			<button @click="toggleShowPhysical" class="sort-button">Physical</button>
+			<a @click="projectCategory = 'both'" class="sort-button">All</a>
+			<a @click="toggleCategory('code')" class="sort-button">Code</a>
+			<a @click="toggleCategory('physical')" class="sort-button">Physical</a>
+			<a @click="toggleCategory('python')" class="sort-button">Python</a>
+			<a @click="toggleCategory('js')" class="sort-button">JS</a>
 		</div>
 
 		<div class="content">
 			<div class="content-item" v-for="project in randomList(Projects)">
-				<template v-if="(project.type === projectCategory || projectCategory === 'both')">
+				<transition name="slide-fade" mode="out-in">
+				<div v-if="(project.type.includes(projectCategory) === true || projectCategory === 'both')" :key="project.title">
 					<a class="project-title" :href="project.url">{{project.title}}</a>
 					<sharedTags class="tags-box" :tags="project.tags"></sharedTags>
 					<br>
 					<h2 class="project-description">{{project.description}}</h2>
 					<hr class="hr-style">
-				</template>
+				</div>
+			</transition>
 			</div>
 		</div>
 
@@ -52,15 +56,10 @@ export default {
 		};
 	},
 	methods: {
-		toggleShowCode: function() {
-			this.projectCategory === 'code'
+		toggleCategory: function(category) {
+			this.projectCategory === category
 				? (this.projectCategory = 'both')
-				: (this.projectCategory = 'code');
-		},
-		toggleShowPhysical: function() {
-			this.projectCategory === 'physical'
-				? (this.projectCategory = 'both')
-				: (this.projectCategory = 'physical');
+				: (this.projectCategory = category)
 		},
 		// Randomizes project order
 		randomList: function(array) {
@@ -93,6 +92,21 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+
+.slide-fade-enter
+	opacity: 0
+	transform: translateY(10px)
+.slide-fast-enter-to
+	opacity: 1
+.slide-fade-enter-active
+	transition: all 0.5s ease 0.5s
+.slide-fade-leave-to
+	opacity: 0
+	transform: translateY(10px)
+.slide-fade-leave-active
+	transition: all 0.5s ease
+
+
 $yeller: #ECE942
 
 $shadow-red: rgba(255, 23, 68, 0.60)
@@ -155,13 +169,8 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 	@include sorter-flex
 
 .sort-button
-	height: 30px
-	margin: 0 10px
-	background: $yeller
-	outline: none
-	border: 2px dotted white
 	cursor: pointer
-
+	margin: 0 10px
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
 //					Typography
 //–––––––––––––––––––––––––––––––––-––––––––––––––––––––––––––––––––––––––––––––
@@ -208,6 +217,12 @@ $shadow-white: rgba(255, 255, 255, 0.4)
 		max-width: 200px
 		min-width: 30px
 		height: 40px
+
+	.sort-button:hover
+		text-shadow: 2px 2px 3px $shadow-red, 1px 1px 3px $shadow-white
+		-webkit-transition: text-shadow .2s ease-in-out
+		-o-transition: text-shadow .2s ease-in-out
+		transition: text-shadow .2s ease-in-out
 
 	/*	Typography	*/
 	.project-title

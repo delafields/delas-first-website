@@ -2,7 +2,7 @@
 	{
 		"title": "Rap Adlibs",
 		"description": "An Alexa Skill for playing your favorite rapper's adlibs",
-		"type": "code",
+		"type": ["code", "python"],
 		"url":
 			"https://www.amazon.com/badatfun-Rap-Adlibs/dp/B078WYKNGP/ref=cm_cr_arp_d_product_top?ie=UTF8",
 		"tags": ["devicon-python-plain", "devicon-amazonwebservices-original"]
@@ -11,21 +11,21 @@
 		"title": "HelpPlz",
 		"description":
 			"A node executable for searching documentation, Google, npm, and Stack Overflow",
-		"type": "code",
+		"type": ["code", "js"],
 		"url": "https://github.com/delafields/CLI/tree/master/HelpPlz",
 		"tags": ["devicon-nodejs-plain"]
 	},
 	{
 		"title": "Screenshotta",
 		"description": "A python script for easy screenshotting",
-		"type": "code",
+		"type": ["code", "python"],
 		"url": "https://github.com/delafields/pomo-clock",
 		"tags": ["devicon-python-plain"]
 	},
 	{
 		"title": "Pomodoro",
 		"description": "Preact PWA pomodoro clock",
-		"type": "code",
+		"type": ["code", "js"],
 		"url": "https://github.com/delafields/pomo-clock",
 		"tags": ["icon-preact"]
 	},
@@ -33,14 +33,14 @@
 		"title": "Smart Mirror",
 		"description":
 			"Mirror that displays stock tickers, calendar, weather, and news from multiple publications running on a Raspberry Pi",
-		"type": "code",
+		"type": ["code", "js"],
 		"url": "https://github.com/delafields/smartmirror-react",
 		"tags": ["devicon-react-original", "icon-redux", "icon-raspberry-pi"]
 	},
 	{
 		"title": "HODLCON",
 		"description": "DEFCON but for cryptocurrencies",
-		"type": "code",
+		"type": ["code", "js"],
 		"url": "http://hodl.netlify.com/",
 		"tags": ["icon-preact"]
 	},
@@ -48,7 +48,7 @@
 		"title": "Favoritify",
 		"description":
 			"A Web App that allows you to see your favorite Spotify music (artists, genres, and tracks, audio features) over three time periods.",
-		"type": "code",
+		"type": ["code", "js"],
 		"url": "http://favoritify.herokuapp.com",
 		"tags": [
 			"devicon-react-original",
@@ -62,28 +62,28 @@
 		"title": "Nokiacoin",
 		"description":
 			"A bot that tweets the current price of BTC in terms of Nokia cellphone models",
-		"type": "code",
+		"type": ["code", "python"],
 		"url": "https://twitter.com/Nokiacoin",
 		"tags": ["devicon-python-plain", "devicon-heroku-plain"]
 	},
 	{
 		"title": "Standing Desk",
 		"description": "A little stand to let me stand",
-		"type": "physical",
+		"type": ["physical"],
 		"url": "https://imgur.com/a/PxWC6",
 		"tags": ["icon-hammer-saw", "icon-wood"]
 	},
 	{
 		"title": "Potting Table",
 		"description": "Mother's Day gift, 2017",
-		"type": "physical",
+		"type": ["physical"],
 		"url": "https://imgur.com/a/dHMST",
 		"tags": ["icon-hammer-saw", "icon-wood"]
 	},
 	{
 		"title": "Personal Site",
 		"description": "No need to click this....you're already here",
-		"type": "code",
+		"type": ["code", "js"],
 		"url": "http://jfields.me/#/confusion",
 		"tags": ["devicon-vuejs-plain", "devicon-sass-original"]
 	}
