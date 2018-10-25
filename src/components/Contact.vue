@@ -27,7 +27,7 @@ import Footer from './shared/Footer.vue';
 export default {
 	components: {
 		sharedTitle: Title,
-		sharedFooter: Footer
+		sharedFooter: Footer,
 	},
 	data() {
 		return {
@@ -50,7 +50,7 @@ export default {
 				},
 				{
 					name: 'Resume',
-					url: ''
+					url: '/resume'
 				}
 			]
 		};

@@ -84,7 +84,7 @@
 		"title": "Personal Site",
 		"description": "No need to click this....you're already here",
 		"type": ["code", "js"],
-		"url": "http://jfields.me/#/confusion",
+		"url": "/confusion",
 		"tags": ["devicon-vuejs-plain", "devicon-sass-original"]
 	}
 ]
